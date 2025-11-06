@@ -20,7 +20,7 @@ model:
 solver:
   base_lr: 1.0e-5
   max_epochs: 12000
-  results_folder: ./Checkpoints_sine
+  results_folder: ../data/diffusion-ts/Checkpoints_sine
   gradient_accumulate_every: 2
   save_cycle: 1200  # max_epochs // 10
   ema:

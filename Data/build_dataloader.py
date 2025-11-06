@@ -1,5 +1,5 @@
 import torch
-from Utils.io_utils import instantiate_from_config
+from ..Utils.io_utils import instantiate_from_config
 
 
 def build_dataloader(config, args=None):

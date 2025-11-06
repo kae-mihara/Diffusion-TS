@@ -20,7 +20,7 @@ model:
 solver:
   base_lr: 1.0e-5
   max_epochs: 10000
-  results_folder: ./Checkpoints_stock
+  results_folder: ../data/diffusion-ts/Checkpoints_stock
   gradient_accumulate_every: 2
   save_cycle: 1000  # max_epochs // 10
   ema:
@@ -45,7 +45,7 @@ dataloader:
     params:
       name: stock
       proportion: 1.0  # Set to rate < 1 if training conditional generation
-      data_root: ./Data/datasets/stock_data.csv
+      data_root: ../data/raw/stock_data.csv
       window: 24  # seq_length
       save2npy: True
       neg_one_to_one: True
@@ -57,7 +57,7 @@ dataloader:
     params:
       name: stock
       proportion: 0.9  # rate
-      data_root: ./Data/datasets/stock_data.csv
+      data_root: ../data/raw/stock_data.csv
       window: 24  # seq_length
       save2npy: True
       neg_one_to_one: True

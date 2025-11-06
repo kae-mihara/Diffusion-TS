@@ -1,7 +1,7 @@
 import scipy
 import numpy as np
 
-from Models.ts2vec.ts2vec import TS2Vec
+from ..Models.ts2vec.ts2vec import TS2Vec
 
 
 def calculate_fid(act1, act2):

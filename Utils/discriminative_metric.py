@@ -23,7 +23,7 @@ import tensorflow as tf
 import tensorflow._api.v2.compat.v1 as tf1
 import numpy as np
 from sklearn.metrics import accuracy_score
-from Utils.metric_utils import train_test_divide, extract_time
+from .metric_utils import train_test_divide, extract_time
 
 
 def batch_generator(data, time, batch_size):

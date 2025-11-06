@@ -5,7 +5,7 @@ from __future__ import print_function
 import os
 import time
 import torch
-from Utils.io_utils import write_args, save_config_to_yaml
+from ..Utils.io_utils import write_args, save_config_to_yaml
 
 
 class Logger(object):

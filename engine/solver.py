@@ -10,7 +10,7 @@ from tqdm.auto import tqdm
 from ema_pytorch import EMA
 from torch.optim import Adam
 from torch.nn.utils import clip_grad_norm_
-from Utils.io_utils import instantiate_from_config, get_model_parameters_info
+from ..Utils.io_utils import instantiate_from_config, get_model_parameters_info
 
 
 sys.path.append(os.path.join(os.path.dirname(__file__), '../'))

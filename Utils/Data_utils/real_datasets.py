@@ -130,10 +130,13 @@ class CustomDataset(Dataset):
     def read_data(filepath, name=''):
         """Reads a single .csv
         """
-        df = pd.read_csv(filepath, header=0)
-        if name == 'etth':
-            df.drop(df.columns[0], axis=1, inplace=True)
-        data = df.values
+        if filepath.endswith('.npz'):
+            data = np.load(filepath)['data']
+        else:
+            df = pd.read_csv(filepath, header=0)
+            if name == 'etth':
+                df.drop(df.columns[0], axis=1, inplace=True)
+            data = df.values
         scaler = MinMaxScaler()
         scaler = scaler.fit(data)
         return data, scaler
