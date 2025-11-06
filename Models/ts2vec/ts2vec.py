@@ -41,7 +41,7 @@ class TS2Vec:
         '''
         
         super().__init__()
-        self.device = device
+        self.device = torch.device(f'cuda:0' if torch.cuda.is_available() else 'cpu')
         self.lr = lr
         self.batch_size = batch_size
         self.max_train_length = max_train_length
